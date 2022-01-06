@@ -7,9 +7,9 @@ import (
 )
 
 func TestArraySum(t *testing.T) {
-	var data = [6]int{1, 2, 3, 4, 10, 11}
-	var res int
+	var data = [6]int{1, 2, 3, 4, 10, 116}
+	var res int;
 
 	res = ArraySum(data, 6)
-	assert.Equal(t, 31, res)
+	assert.Equal(t, 136, res)
 }
