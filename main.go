@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github/andiahmads/go-hackrank-series/diagonal_deference"
+	"github/andiahmads/go-hackrank-series/print_diagonal_matrix"
 )
 
 // func main() {
@@ -22,14 +22,26 @@ import (
 
 // }
 
+// func main() {
+// 	// var matrix = diagonal_deference.DiagonalDeference
+// 	matrix := [3][3]float64{
+// 		{11, 2, 4},
+// 		{4, 5, 6},
+// 		{10, 8, -12},
+// 	}
+// 	callFunction := diagonal_deference.DiagonalDeference(matrix)
+// 	fmt.Println(callFunction)
+
+// }
+
 func main() {
-	// var matrix = diagonal_deference.DiagonalDeference
-	matrix := [3][3]float64{
+	matrix := [3][3]int{
 		{11, 2, 4},
 		{4, 5, 6},
 		{10, 8, -12},
 	}
-	callFunction := diagonal_deference.DiagonalDeference(matrix)
-	fmt.Println(callFunction)
+
+	printMatrix := print_diagonal_matrix.PrintMatrixDiagonal(matrix)
+	fmt.Println(printMatrix)
 
 }
