@@ -1,9 +1,8 @@
 package diagonal_deference
 
 import (
+	"fmt"
 	"testing"
-
-	"github.com/stretchr/testify/assert"
 )
 
 func TestDiagonalDeference(t *testing.T) {
@@ -13,6 +12,6 @@ func TestDiagonalDeference(t *testing.T) {
 		{10, 8, -12},
 	}
 	callFunction := DiagonalDeference(matrix)
-	assert.Equal(t, callFunction, callFunction)
+	fmt.Println(callFunction)
 
 }
