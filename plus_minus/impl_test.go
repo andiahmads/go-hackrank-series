@@ -36,8 +36,4 @@ func TestPlusMinus(t *testing.T) {
 	fmt.Println(negative)
 	fmt.Println(bulat)
 
-	// fmt.Println(float64(positive) / float64(sum))
-	// fmt.Println(float64(negative) / float64(sum))
-	// fmt.Println(float64(nol) / float64(sum))
-
 }
