@@ -12,7 +12,6 @@ func TestSun(t *testing.T) {
 }
 
 func Sun(arr []int) int {
-
 	max := 0
 	index := 0
 	var sisa []int
@@ -20,10 +19,8 @@ func Sun(arr []int) int {
 	for i, v := range arr {
 		if v > max {
 			max = v
-
 			index = i
 		}
-
 		sisa = arr[index+1:]
 	}
 

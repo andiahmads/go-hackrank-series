@@ -8,10 +8,11 @@ import (
 func minMaxIndexArray(arr []int) (int, int) {
 
 	var min, max int
+	fmt.Println(min)
 	for i, val := range arr {
 		switch {
 		case i == 0:
-			min, max = val, val
+			min = val
 		case i > max:
 			max = val
 		case i < min:
@@ -22,7 +23,7 @@ func minMaxIndexArray(arr []int) (int, int) {
 }
 
 func TestMinMaxIndexArray(t *testing.T) {
-	var arr = []int{-1, 1, 2, 3, 4, 5, 21}
+	var arr = []int{1, 1, 2, 3, 4, 5, 21}
 
 	min, max := minMaxIndexArray(arr)
 
