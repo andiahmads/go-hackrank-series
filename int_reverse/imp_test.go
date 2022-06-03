@@ -2,14 +2,14 @@ package intreverse
 
 import (
 	"fmt"
-	"math"
 	"testing"
 )
 
 func Test(t *testing.T) {
 
 	// new_int := 0
-	number := 1534236469
+	number := 153
+	// number := 153
 
 	// result := ReverseInt(number)
 	rev := reverse(number)
@@ -38,22 +38,20 @@ func ReverseInt(number int) int {
 func reverse(x int) int {
 
 	temp := 0
-
-	maxINT := math.MaxInt
-
-	test := 1534236469
-	// fmt.Println(maxINT)
-	fmt.Printf("ini int:%d \n", test)
+	prev := 0
 
 	for x != 0 {
 
 		c := x % 10
-		temp = temp*10 + c
 
 		x /= 10
-		if x > maxINT {
+
+		temp = temp*10 + c
+
+		if temp-c/10 != prev {
 			return 0
 		}
+		prev = temp
 
 	}
 	return temp
