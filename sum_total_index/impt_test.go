@@ -41,6 +41,6 @@ func TestTestingSum(t *testing.T) {
 
 	//cetak array
 	for key, val := range count {
-		fmt.Println(key, "berjumlah = ", val)
+		fmt.Println(key, "berjumlah :%d ", val)
 	}
 }
