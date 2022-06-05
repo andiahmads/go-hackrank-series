@@ -6,7 +6,7 @@ import (
 )
 
 func TestRemoveContaintDuplicateArray(t *testing.T) {
-	arr := []int{0,0,1,1,1,2,2,3,3,4}
+	arr := []int{1,1,2,2,4}
 	res := removecontaintduplicate(arr)
 	fmt.Println(res)
 
