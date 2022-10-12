@@ -6,8 +6,8 @@ import (
 )
 
 func TestTwoSum(t *testing.T) {
-	var nums = []int{3, 2, 4, 9}
-	target := 11
+	var nums = []int{4, 6, 23, 10, 1, 3}
+	target := 23
 
 	res := TwoSum(nums, target)
 

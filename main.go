@@ -1,8 +1,10 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
-	"github/andiahmads/go-hackrank-series/print_diagonal_matrix"
+	"os"
+	"strings"
 )
 
 // func main() {
@@ -35,13 +37,23 @@ import (
 // }
 
 func main() {
-	matrix := [3][3]int{
-		{11, 2, 4},
-		{4, 5, 6},
-		{10, 8, -12},
-	}
+	var line string
+	scanner := bufio.NewScanner(os.Stdin)
 
-	printMatrix := print_diagonal_matrix.PrintMatrixDiagonal(matrix)
-	fmt.Println(printMatrix)
+	for scanner.Scan() {
+		line = scanner.Text()
+
+		world := strings.Fields(line)
+
+		for i, v := range world {
+			str := v[i:]
+			str2 := v[i:]
+			fmt.Println(string(str))
+			fmt.Println(string(str2))
+
+			// toUpper := strings.ToUpper(str)
+		}
+
+	}
 
 }

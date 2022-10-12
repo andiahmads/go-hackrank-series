@@ -7,7 +7,7 @@ import (
 
 func TestFIzzBuzz(t *testing.T) {
 
-	for i := 1; i < 100; i++ {
+	for i := 1; i < 15; i++ {
 
 		if i%5 == 0 && i%3 == 0 {
 			fmt.Println("fizzbuzz")

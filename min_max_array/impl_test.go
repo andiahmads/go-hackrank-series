@@ -11,14 +11,12 @@ func TestMinMax(t *testing.T) {
 	var sum int
 	for i := 0; i < len(arr); i++ {
 
-		sum = sum + arr[i]
+		sum += arr[i]
 	}
-
-	fmt.Println(sum)
 
 	var min, max int
 	for i := 0; i < len(arr); i++ {
-
+		fmt.Println(min)
 		if sum-arr[i] <= min || max == 0 {
 			min = sum - arr[i]
 		}

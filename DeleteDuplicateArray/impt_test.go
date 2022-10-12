@@ -6,7 +6,7 @@ import (
 )
 
 func TestDeleteDuplicateArray(t *testing.T) {
-	var numbers = []int{2, 3, 0, 4, 3, 2, 0, 4, 2, 0, 3}
+	var numbers = []int{2, 3, 0, 4, 3, 2, 0, 4, 2, 0, 3, 1}
 	res := DeleteDuplicateArray(numbers)
 	fmt.Println(res)
 }

@@ -2,33 +2,87 @@ package stringpalindrom_test
 
 import (
 	"fmt"
+	"strings"
 	"testing"
 )
 
 func TestStringPalindrome(t *testing.T) {
-	str := "abx"
-	res := isPolindrome(str)
+	str := "Was it a car or a cat I saw?"
+
+	res := isPalindrome2(str)
+
 	fmt.Println(res)
+
 }
 
-func isPolindrome(str string) bool {
+func isPalindrome2(str string) bool {
+
+	str = strings.ToLower(str)
+	str = strings.ReplaceAll(str, " ", "")
+	str = strings.ReplaceAll(str, "?", "")
+
+	fmt.Println(str)
 	for i := 0; i < len(str); i++ {
-		// fmt.Print(string(str[i]))
-		fmt.Print(i)
 
-		j := len(str) - 1 - i
+		j := len(str) - i - 1
 
-		/*
-			3-1= 2 -0 = 2
-			3-1= 2- 1 = 1
-			3-1= 2- 2 = 0
-		*/
+		if str[i] == str[j] {
+			return true
+		}
 
-		fmt.Println(j)
-		if str[i] != str[j] {
-			return false
+	}
+
+	return false
+
+}
+
+func isPalindrome(a string) bool {
+
+	n := len(a)
+
+	var st map[string]interface{}
+
+	for i := 0; i < n; i++ {
+		st[""] = string(a[i])
+	}
+
+	var check bool
+
+	for _, val := range st {
+		low := 0
+		high := n - 1
+
+		var flag bool
+
+		for i := 0; i < n; i++ {
+			if a[low] == a[high] {
+
+				low++
+				high--
+
+			} else {
+				if a[low] == val {
+					low++
+				} else if a[high] == val {
+
+					high--
+				} else {
+					flag = false
+					break
+				}
+			}
+		}
+
+		if flag == true {
+			check = true
+			break
 		}
 	}
-	return true
+
+	if check {
+		return true
+	} else {
+		return false
+	}
 
 }

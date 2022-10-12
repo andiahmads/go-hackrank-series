@@ -33,6 +33,7 @@ func TestPlusMinus(t *testing.T) {
 	positive, negative, bulat := PlusMinus(arr)
 
 	fmt.Println(positive)
+	fmt.Printf("%.6f\n", positive)
 	fmt.Println(negative)
 	fmt.Println(bulat)
 
